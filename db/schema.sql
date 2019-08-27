@@ -7,7 +7,7 @@ use burgers_db;
 create table burgers (
     id int auto_increment,
     burger_name varchar(89) not null,
-    devoured boolean,
+    devoured boolean DEFAULT false,
     primary key (id)
 )
 

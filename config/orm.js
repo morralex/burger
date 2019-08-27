@@ -2,6 +2,17 @@ var connection = require("./connection")
 
 var orm = {
 
+    // ************************Example*****************************
+
+    // select: function(whatToSelect, tableInput) {
+    //     var queryString = 'SELECT ?? FROM ??';
+    //     connection.querry(queryString, [whatToSelect, tableInput], function(err, result){
+    //         if (err) throw err;
+    //         console.log(result);
+    //     })
+    // }
+    // ***********************************************************
+
     // selectAll()
     all: function (tableInput, cb) {
         var queryString = "SELECT * FROM" + tableInput + ";";
@@ -35,9 +46,8 @@ var orm = {
         });
     },
 
-
-
     // updateOne()
+
     update: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
@@ -55,8 +65,6 @@ var orm = {
             cb(result);
         });
     }
-
-
 
 }
 

@@ -1,7 +1,7 @@
 // *********************************************************************************
 // CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
 // *********************************************************************************
-
+require("dotenv").config();
 // Require mysql
 var mysql = require("mysql");
 
@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
   host: "",
   port: 3306,
   user: "root",
-  password: "root",
+  password: process.env.burger_pw,
   database: "burgers_db"
 });
 
